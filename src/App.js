@@ -94,7 +94,7 @@ const toggleRemaider = async (id)=>{
   console.log(tasks)
  }
 return (
-  <BrowserRouter basename="/Task-tracker">
+  <BrowserRouter >
     <div className="App container"> 
     <Header  title ='Task Tracker' onADDClick ={()=>{
     setShowAddTask(!showAddTask);}}  showAddTask={showAddTask}/>
