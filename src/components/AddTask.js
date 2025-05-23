@@ -4,7 +4,7 @@ const AddTask = ({onADDNewTask})=>{
     
     const [text,setText] = useState('');
     const [day,setDay] = useState('');
-    const [reminder,SetReminder] = useState(false);
+    const [remainder,SetReminder] = useState(false);
 
     const onSubmit =(e)=>{
         e.preventDefault()
@@ -12,7 +12,7 @@ const AddTask = ({onADDNewTask})=>{
             alert('Please add a task')
             return
         }
-        onADDNewTask({text,day,reminder});
+        onADDNewTask({text,day,remainder});
         setText('');
         setDay('');
         SetReminder(false);
@@ -37,8 +37,8 @@ const AddTask = ({onADDNewTask})=>{
         <div className = 'form-control form-control-check'>
         <label>SetReminder</label>
         <input type ="checkbox" 
-        checked ={reminder }
-        value = {reminder}
+        checked ={remainder}
+        value = {remainder}
         onChange={
             (e)=>SetReminder(e.currentTarget.checked)}/>
         </div> 
